@@ -3,7 +3,7 @@ import React from "react";
 class Footer extends React.Component{
     render() {
         return (
-            <p>Author: Rhett Beardemphl</p>
+            <p onClick={this.props.onClick} >Author: Rhett Beardemphl</p>
         )
     }
 };

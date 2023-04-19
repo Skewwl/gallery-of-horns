@@ -1,0 +1,10 @@
+.hornedBeasts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+}
+
+#bigbutton{
+    background-color: 'blue';
+}
