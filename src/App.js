@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
+import hbarray from './hbarray';
 import './App.css';
 
 class App extends React.Component{
@@ -33,9 +34,11 @@ class App extends React.Component{
 
   updateElement = () => {
     let cardButtonArr = document.querySelectorAll('#bigbutton');
-    cardButtonArr[0].style.backgroundColor = this.state.currentColor;
-    cardButtonArr[1].style.backgroundColor = this.state.currentColor;
-    cardButtonArr[2].style.backgroundColor = this.state.currentColor;
+    // cardButtonArr[0].style.backgroundColor = this.state.currentColor;
+    // cardButtonArr[1].style.backgroundColor = this.state.currentColor;
+    // cardButtonArr[2].style.backgroundColor = this.state.currentColor;
+    cardButtonArr.forEach(hornedAnimal => hornedAnimal.style.backgroundColor = this.state.currentColor)
+
   }
 
   render() {
