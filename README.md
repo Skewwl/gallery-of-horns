@@ -39,6 +39,7 @@ Finish time: 8:05
 Actual time needed to complete: 65 minutes
 
 ----------------------------------------------
+
 Number and name of feature: 4, Display Modal
 
 Estimate of time needed to complete: 120 minutes
