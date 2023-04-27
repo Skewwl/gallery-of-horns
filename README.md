@@ -49,3 +49,15 @@ Start time: 3:00
 Finish time: 4:30
 
 Actual time needed to complete: 90 minutes
+
+----------------------------------------------
+
+Number and name of feature: 5, Form / Filter Beasts
+
+Estimate of time needed to complete: 120 minutes
+
+Start time: 6:30
+
+Finish time: 9:00
+
+Actual time needed to complete: 150 minutes

@@ -8,8 +8,8 @@ class Filter extends React.Component {
             <Form>
                 <Form.Group>
                     <Form.Label>Filter Beasts</Form.Label>
-                    <Form.Select>
-                        <option>Select Number of Horns</option>
+                    <Form.Select onChange={this.props.filter}>
+                        <option value="all">All Horned Beasts</option>
                         <option value="1">One Horn</option>
                         <option value="2">Two Horns</option>
                         <option value="3">Three Horns</option>

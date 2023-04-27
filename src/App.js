@@ -15,7 +15,8 @@ class App extends React.Component{
     this.state = {
         currentColor: 'blue',
         showModal: false,
-        beastObject: {}
+        beastObject: {},
+        hornValue: 'all'
     }
   }
 
@@ -52,7 +53,7 @@ class App extends React.Component{
   }
 
   filterBeasts = (e) => {
-    console.log(e.target.value)
+    this.setState({hornValue : e.target.value});
   }
 
   render() {
@@ -62,10 +63,11 @@ class App extends React.Component{
           stateColor={this.state.currentColor} 
           onClick={this.changeColor} />
         <Filter 
-          onChange={this.filterBeasts}/>
+          filter={this.filterBeasts}/>
         <Main 
           update={this.updateElement} 
           stateColor={this.state.currentColor} 
+          stateHorns={this.state.hornValue}
           toggleModal={this.toggleModal} 
           updateBeast={this.updateBeastObj}
           data={hbarray}/>
