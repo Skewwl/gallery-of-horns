@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header';
+import Filter from './Filter';
 import Main from './Main';
 import SelectedBeast from './SelectedBeast';
 import Footer from './Footer';
@@ -14,7 +15,8 @@ class App extends React.Component{
     this.state = {
         currentColor: 'blue',
         showModal: false,
-        beastObject: {}
+        beastObject: {},
+        hornValue: 'all'
     }
   }
 
@@ -50,15 +52,22 @@ class App extends React.Component{
     this.setState({beastObject: beast})
   }
 
+  filterBeasts = (e) => {
+    this.setState({hornValue : e.target.value});
+  }
+
   render() {
     return (
       <div className="App">
         <Header 
           stateColor={this.state.currentColor} 
           onClick={this.changeColor} />
+        <Filter 
+          filter={this.filterBeasts}/>
         <Main 
           update={this.updateElement} 
           stateColor={this.state.currentColor} 
+          stateHorns={this.state.hornValue}
           toggleModal={this.toggleModal} 
           updateBeast={this.updateBeastObj}
           data={hbarray}/>
