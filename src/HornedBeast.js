@@ -6,7 +6,8 @@ class HornedBeast extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            helloCounter: 0
+            helloCounter: 0,
+            inDB: false
         }
     }
 
@@ -32,15 +33,10 @@ class HornedBeast extends React.Component {
                     </Card.Text>
                     <Button id="bigbutton" variant="primary" onClick={this.incrementHello}>Add Like</Button>
                     <div>❤️'s: {this.state.helloCounter}</div>
+                    <Button id="bigbutton" variant="success" onClick={this.incrementHello}>{this.state.inDB ? "Remove from Database" : "Add to Database"}</Button>
+                    <div>In Database: {this.state.inDB ? "True" : "False"}</div>
                 </Card.Body>
             </Card>
-            // <div>
-            //     <h2>{this.props.title}</h2>
-            //     <img src={this.props.imageURL} alt={this.props.title} title={this.props.title} />
-            //     <p>{this.props.description}</p>
-            //     <button onClick={this.incrementHello}>Add a like</button>
-            //     <div>❤️'s: {this.state.helloCounter}</div>
-            // </div>
         )
     }
 };
